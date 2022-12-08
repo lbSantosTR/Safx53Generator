@@ -24,6 +24,15 @@
                 "aliq": 5
             },
             "COD_NAT_REND": "10002"
+        },
+        {
+            "IND_FIS_JUR": 5,
+            "COD_FIS_JUR": "REINF170802",
+            "COD_DARF": {
+                "darf": "3157",
+                "aliq": 5
+            },
+            "COD_NAT_REND": "10002"
         }
     ]
 }

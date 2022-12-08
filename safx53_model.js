@@ -65,7 +65,7 @@ const safx53Reinf = {
     VLR_PG_TITULAR: '@',
     IND_TIPO_ISENCAO: '@',
     DSC_RENDIMENTO: '@',
-    COD_NAT_REND: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+    COD_NAT_REND: '',
     CNPJ_FUND_INV: '@',
     NOME_FUND_INV: '@',
     NUM_INSC_PREV: '@',
