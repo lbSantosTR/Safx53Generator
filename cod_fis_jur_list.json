@@ -1,0 +1,29 @@
+{
+    "COD_FIS_JUR_OBJECT": [
+        {
+            "IND_FIS_JUR": 5,
+            "COD_FIS_JUR": "REINF170810001",
+            "COD_DARF": {
+                "darf": "1708",
+                "aliq": 1
+            },
+            "COD_NAT_REND": "10001"
+        },
+        {
+            "IND_FIS_JUR": 5,
+            "COD_FIS_JUR": "REINF1708",
+            "COD_DARF": { "darf": "1505", "aliq": 1.50
+            },
+            "COD_NAT_REND": "10003"
+        },
+        {
+            "IND_FIS_JUR": 5,
+            "COD_FIS_JUR": "REINF170802",
+            "COD_DARF": {
+                "darf": "3333",
+                "aliq": 5
+            },
+            "COD_NAT_REND": "10002"
+        }
+    ]
+}
