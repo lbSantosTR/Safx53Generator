@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { COD_FIS_JUR_OBJECT } = require('./cod_fis_jur_list.json');
+const { COD_FIS_JUR_OBJECT } = require('./regrasCampos.json');
 const safx53Reinf = require('./safx53_model.js');
 
 const formatDayLessThanTen = (dia) => {
