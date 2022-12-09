@@ -1,3 +1,4 @@
+const safx531Reinf = require ('./safx531_model');
 const safx53Reinf = {
     COD_EMPRESA: '@',
     COD_ESTAB: '@',
@@ -65,7 +66,7 @@ const safx53Reinf = {
     VLR_PG_TITULAR: '@',
     IND_TIPO_ISENCAO: '@',
     DSC_RENDIMENTO: '@',
-    COD_NAT_REND: '',
+    COD_NAT_REND: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
     CNPJ_FUND_INV: '@',
     NOME_FUND_INV: '@',
     NUM_INSC_PREV: '@',
@@ -100,7 +101,7 @@ const safx53Reinf = {
     VLR_APOSENT_ISENTA_13: '@',
     VLR_JUROS_MORA: '@',
     VLR_RESG_PREV_COMPL: '@',
-    VLR_REND_S_RET_IR: '@',
+    VLR_REND_S_RET_IR: '@'
 }
 
 module.exports = safx53Reinf;
