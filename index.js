@@ -52,14 +52,14 @@ const exportObject = (object) => {
       
         
 }
-
-const rules = (empresa, estab, mesAno, geraX531, ) => {
+const rules = (empresa, estab, mesAno) => {
     
     let docNumber = mascaraNumber(9,1);
 
     for (let FIS_JUR of COD_FIS_JUR_OBJECT) {
         safx53Reinf.COD_EMPRESA = empresa;
         safx53Reinf.COD_ESTAB = mascaraString(6, estab);
+        safx53Reinf.DATA_MOVTO = mesAno.substring(2, 6) + mesAno.substring(0, 2) + formatDayLessThanTen(random(1, 30));
         safx53Reinf.DATA_MOVTO = mesAno.substring(2, 6) + mesAno.substring(0, 2) + formatDayLessThanTen(random(1, 30));
         safx53Reinf.IND_FIS_JUR = FIS_JUR.IND_FIS_JUR;
         safx53Reinf.COD_FIS_JUR = mascaraString(14,FIS_JUR.COD_FIS_JUR);
