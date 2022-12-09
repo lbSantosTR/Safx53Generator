@@ -54,10 +54,8 @@ const exportObject = (object) => {
 }
 
 const rules = (empresa, estab, mesAno, geraX531, ) => {
-    const espacoVazio = ' ';
-    const zero = '0';
     
-    let docNumber = 1;
+    let docNumber = mascaraNumber(9,1);
 
     for (let FIS_JUR of COD_FIS_JUR_OBJECT) {
         safx53Reinf.COD_EMPRESA = empresa;
@@ -75,7 +73,7 @@ const rules = (empresa, estab, mesAno, geraX531, ) => {
         safx53Reinf.COD_NAT_REND = FIS_JUR.COD_NAT_REND;
 
         exportObject(safx53Reinf);
-        docNumber++
+        docNumber = mascaraNumber(9,Number(docNumber) + 1);
     }
 }
 
