@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const { COD_FIS_JUR_OBJECT } = require('./regrasCampos.json');
-const safx53Reinf = require('./safx53_model.js');
-const safx531Reinf = require('./safx531_model.js');
-const safx532Reinf = require('./safx532_model.js');
+const safx53Reinf = require('./models/safx53_model.js');
+const safx531Reinf = require('./models/safx531_model.js');
+const safx532Reinf = require('./models/safx532_model.js');
 
 const formatDayLessThenTen = (dia) => {
     if (dia < 10){
@@ -57,9 +57,6 @@ const exportObject = (object, fileName) => {
 }
 
 const rules = (empresa, estab, mesAno) => {
-    const espacoVazio = ' ';
-    const zero = '0';
-    
     let docNumber = 1;
 
     for (let FIS_JUR of COD_FIS_JUR_OBJECT) {
