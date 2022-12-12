@@ -1,44 +1,19 @@
 const fs = require('fs');
 const path = require('path');
-const { COD_FIS_JUR_OBJECT } = require('./regrasCampos.json');
+
+//utils
+const {mascaraString, mascaraNumber} = require('./utils/marcaras');
+const {random, ramdomValues, randomValueFromArray} = require('./utils/randomUtilities');
+const formatDayLessThenTen = require('./utils/dataUtilities');
+
+//models
 const safx53Reinf = require('./models/safx53_model.js');
 const safx531Reinf = require('./models/safx531_model.js');
 const safx532Reinf = require('./models/safx532_model.js');
 
-const formatDayLessThenTen = (dia) => {
-    if (dia < 10){
-        return '0' + dia;
-    }
-    return dia;
-}
+//config
+const { COD_FIS_JUR_OBJECT } = require('./regrasCampos.json');
 
-const mascaraString = (length, texto) => {
-    return texto + ' '.repeat(length - texto.length)
-}
-
-const mascaraNumber = (length, texto, decimal) => {
-    if (typeof texto === 'number') {
-        texto = String(texto)
-    }
-
-    texto = texto.replaceAll('.', '');
-
-    return '0'.repeat(length - texto.length) + texto
-}
-
-
-const random = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-const ramdomValues = (min, max) => {
-    return Math.floor((Math.random() * (max - min + 1) + min) * 100);
-
-}
-
-const randomValueFromArray = (list) => {
-    return random(0, list.length - 1);
-}
 
 const exportObject = (object, fileName) => {
         const allLinesFromObject = Object.values(object);
