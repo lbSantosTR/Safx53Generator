@@ -7,9 +7,12 @@ const {random, ramdomValues, randomValueFromArray} = require('./utils/randomUtil
 const formatDayLessThenTen = require('./utils/dataUtilities');
 
 //models
-const safx53Reinf = require('./models/safx53_model.js');
-const safx531Reinf = require('./models/safx531_model.js');
-const safx532Reinf = require('./models/safx532_model.js');
+const safx53Reinf = require('./models/safx53_model');
+const safx531Reinf = require('./models/safx531_model');
+const safx532Reinf = require('./models/safx532_model');
+const safx534Reinf = require('./models/safx534_model');
+const safx535Reinf = require('./models/safx535_model');
+const safx536Reinf = require('./models/safx536_model');
 
 //config
 const { COD_FIS_JUR_OBJECT } = require('./regrasCampos.json');
@@ -88,8 +91,9 @@ const rules = (empresa, estab, mesAno) => {
         safx532Reinf.IND_TP_PROC_ADJ = safx531Reinf.IND_TP_PROC_ADJ;
         safx532Reinf.NUM_PROC_ADJ = safx531Reinf.NUM_PROC_ADJ;
         safx532Reinf.COD_SUSP = safx531Reinf.COD_SUSP;
-
         exportObject(safx532Reinf, 'safx532');
+
+        
 
         docNumber++
     }
