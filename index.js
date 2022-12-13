@@ -123,10 +123,6 @@ const rules = (empresa, estab, mesAno) => {
         safx536Reinf.IND_FIS_JUR = FIS_JUR.IND_FIS_JUR;
         safx536Reinf.COD_FIS_JUR = mascaraString(14,FIS_JUR.COD_FIS_JUR);
         safx536Reinf.NUM_DOCFIS = mascaraString(12, docNumber);
-        safx536Reinf.IND_TIPO_REND = safx531Reinf.IND_TIPO_REND;
-        safx536Reinf.IND_TP_PROC_ADJ = safx531Reinf.IND_TP_PROC_ADJ;
-        safx536Reinf.NUM_PROC_ADJ = safx531Reinf.NUM_PROC_ADJ;
-        safx536Reinf.COD_SUSP = safx531Reinf.COD_SUSP;
         exportObject(safx536Reinf, 'safx536');
 
         docNumber++
