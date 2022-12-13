@@ -31,7 +31,7 @@ const exportObject = (object, fileName) => {
             }
             line += value + '\t'
         })
-        fs.appendFileSync(path.join(__dirname, 'output',fileName + '.txt'),line + '\r','utf8');
+        fs.appendFileSync(path.join(__dirname, 'output',fileName + '.txt'),line + '\n','utf8');
       
         
 }
@@ -65,6 +65,7 @@ const rules = (empresa, estab, mesAno) => {
         safx531Reinf.VLR_DESP_JUD = mascaraNumber(17, ramdomValues(100, 900));
         safx531Reinf.VLR_DESP_ADVOGADO = mascaraNumber(17, ramdomValues(100, 900));
         safx531Reinf.VLR_N_RETIDO_IR = mascaraNumber(17, ramdomValues(100, 900));
+        
         if (safx531Reinf.IND_TIPO_REND === '3'){
             safx531Reinf.VLR_DEP_JUD_IR = mascaraNumber(17, ramdomValues(100, 900));
             safx531Reinf.VLR_COMP_ANO_CAL_IR = mascaraNumber(17, ramdomValues(100, 900));
@@ -81,6 +82,22 @@ const rules = (empresa, estab, mesAno) => {
             safx531Reinf.VLR_N_PIS_PASEP = mascaraNumber(17, ramdomValues(100, 900));
             safx531Reinf.VLR_DEP_PIS_PASEP = mascaraNumber(17, ramdomValues(100, 900));
         }
+        else {
+            safx531Reinf.VLR_DEP_JUD_IR = mascaraNumber(17, '0');
+            safx531Reinf.VLR_COMP_ANO_CAL_IR = mascaraNumber(17, '0');
+            safx531Reinf.VLR_COMP_ANO_ANT_IR = mascaraNumber(17, '0');
+            safx531Reinf.VLR_REND_EXIG_SUSP_IR = mascaraNumber(17, '0');
+            safx531Reinf.VLR_BASE_SUSP_IR = mascaraNumber(17, '0');
+            safx531Reinf.VLR_BASE_SUSP_CSLL = mascaraNumber(17, '0');
+            safx531Reinf.VLR_N_CSLL = mascaraNumber(17, '0');
+            safx531Reinf.VLR_DEP_CSLL = mascaraNumber(17, '0');
+            safx531Reinf.VLR_BASE_SUSP_COFINS = mascaraNumber(17, '0');
+            safx531Reinf.VLR_N_COFINS = mascaraNumber(17, '0');
+            safx531Reinf.VLR_DEP_COFINS = mascaraNumber(17, '0');
+            safx531Reinf.VLR_BASE_SUSP_PIS_PASEP = mascaraNumber(17, '0');
+            safx531Reinf.VLR_N_PIS_PASEP = mascaraNumber(17, '0');
+            safx531Reinf.VLR_DEP_PIS_PASEP = mascaraNumber(17, '0');
+        }
         exportObject(safx531Reinf, 'safx531');
 
         safx532Reinf.COD_EMPRESA = empresa;
@@ -89,6 +106,7 @@ const rules = (empresa, estab, mesAno) => {
         safx532Reinf.IND_FIS_JUR = FIS_JUR.IND_FIS_JUR;
         safx532Reinf.COD_FIS_JUR = mascaraString(14,FIS_JUR.COD_FIS_JUR);
         safx532Reinf.NUM_DOCFIS = mascaraString(12, docNumber);
+        safx532Reinf.COD_DARF = FIS_JUR.COD_DARF.darf;
         safx532Reinf.IND_TIPO_REND = safx531Reinf.IND_TIPO_REND;
         safx532Reinf.IND_TP_PROC_ADJ = safx531Reinf.IND_TP_PROC_ADJ;
         safx532Reinf.NUM_PROC_ADJ = safx531Reinf.NUM_PROC_ADJ;
