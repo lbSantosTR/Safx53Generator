@@ -14,8 +14,8 @@ const safx534Reinf = {
     IND_TP_PROC_ADJ: '@',
     NUM_PROC_ADJ: '@',
     COD_SUSP: '@',
-    NUM_SEQ: '@',
-    IND_TP_DEDUCAO: '@',
+    NUM_SEQ: '1',
+    IND_TP_DEDUCAO: '1',
     VLR_DED_EXIG_SUSP: '@',
 }
     

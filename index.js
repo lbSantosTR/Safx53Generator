@@ -3,8 +3,10 @@ const path = require('path');
 
 //utils
 const {mascaraString, mascaraNumber} = require('./utils/marcaras');
-const {random, ramdomValues, randomValueFromArray} = require('./utils/randomUtilities');
+const {random, ramdomValues} = require('./utils/randomUtilities');
 const formatDayLessThenTen = require('./utils/dataUtilities');
+const geraDigitoVerificador = require('./utils/geradorcnpj');
+
 
 //models
 const safx53Reinf = require('./models/safx53_model');
@@ -68,9 +70,9 @@ const rules = (empresa, estab, mesAno) => {
             safx531Reinf.VLR_COMP_ANO_CAL_IR = mascaraNumber(17, ramdomValues(100, 900));
             safx531Reinf.VLR_COMP_ANO_ANT_IR = mascaraNumber(17, ramdomValues(100, 900));
             safx531Reinf.VLR_REND_EXIG_SUSP_IR = mascaraNumber(17, ramdomValues(100, 900));
-            safx531Reinf. VLR_BASE_SUSP_IR = mascaraNumber(17, ramdomValues(100, 900));
+            safx531Reinf.VLR_BASE_SUSP_IR = mascaraNumber(17, ramdomValues(100, 900));
             safx531Reinf.VLR_BASE_SUSP_CSLL = mascaraNumber(17, ramdomValues(100, 900));
-            safx531Reinf. VLR_N_CSLL = mascaraNumber(17, ramdomValues(100, 900));
+            safx531Reinf.VLR_N_CSLL = mascaraNumber(17, ramdomValues(100, 900));
             safx531Reinf.VLR_DEP_CSLL = mascaraNumber(17, ramdomValues(100, 900));
             safx531Reinf.VLR_BASE_SUSP_COFINS = mascaraNumber(17, ramdomValues(100, 900));
             safx531Reinf.VLR_N_COFINS = mascaraNumber(17, ramdomValues(100, 900));
@@ -91,6 +93,8 @@ const rules = (empresa, estab, mesAno) => {
         safx532Reinf.IND_TP_PROC_ADJ = safx531Reinf.IND_TP_PROC_ADJ;
         safx532Reinf.NUM_PROC_ADJ = safx531Reinf.NUM_PROC_ADJ;
         safx532Reinf.COD_SUSP = safx531Reinf.COD_SUSP;
+        safx532Reinf.CPF_CNPJ_ADVOGADO = geraDigitoVerificador();
+        safx532Reinf.VLR_DESP_ADVOGADO = mascaraNumber(17, ramdomValues(100, 900));
         exportObject(safx532Reinf, 'safx532');
 
         safx534Reinf.COD_EMPRESA = empresa;
@@ -103,6 +107,8 @@ const rules = (empresa, estab, mesAno) => {
         safx534Reinf.IND_TP_PROC_ADJ = safx531Reinf.IND_TP_PROC_ADJ;
         safx534Reinf.NUM_PROC_ADJ = safx531Reinf.NUM_PROC_ADJ;
         safx534Reinf.COD_SUSP = safx531Reinf.COD_SUSP;
+        safx534Reinf.COD_DARF = FIS_JUR.COD_DARF.darf;
+        safx534Reinf.VLR_DED_EXIG_SUSP = mascaraNumber(17, ramdomValues(100, 900));
         exportObject(safx534Reinf, 'safx534');
 
         safx535Reinf.COD_EMPRESA = empresa;
