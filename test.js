@@ -1,0 +1,3 @@
+const { randomCnpjRaiz } = require('./randomUtilities');
+
+

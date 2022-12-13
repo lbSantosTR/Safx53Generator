@@ -11,14 +11,22 @@ const randomValueFromArray = (list) => {
     return random(0, list.length - 1);
 }
 
-const randomCnpjRaiz = () => {
-    let cnpj = '';
+const randomCnpjRaiz = (type) => {
+    let campo = '';
 
     for (let i = 0; i < 8; i++){
-        cnpj += random(1,9);
+        campo += random(1,9);
     }
 
-    return cnpj + '0001';
+    if (type === 'cpf'){
+        //Irá sempre retornar o digito da UF de SP;
+        return campo + '6';
+    }
+    if (type === 'cnpj'){
+        return campo + '0001';
+    }
+    return null;
+    
 }
 
 module.exports = {random, ramdomValues, randomValueFromArray, randomCnpjRaiz};
