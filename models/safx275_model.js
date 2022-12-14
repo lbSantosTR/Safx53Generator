@@ -10,7 +10,7 @@ const safx275Reinf = {
     IND_REL_DEP: '@',
     DSC_DEP: '@',
     IND_PENSAO: '@',
-    IND_PLANO: '@',
+    IND_PLANO: '@'
 }
     
 module.exports = safx275Reinf;

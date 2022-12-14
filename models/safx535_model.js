@@ -16,7 +16,7 @@ const safx535Reinf = {
     COD_SUSP: '@',
     NUM_SEQ: '@',
     CPF_DEP: '@',
-    VLR_DEPEN_SUSP: '@',
+    VLR_DEPEN_SUSP: '@'
 }
     
 module.exports = safx535Reinf;

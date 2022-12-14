@@ -115,31 +115,41 @@ const rules = (empresa, estab, mesAno) => {
         safx532Reinf.VLR_DESP_ADVOGADO = mascaraNumber(17, ramdomValues(100, 900));
         exportObject(safx532Reinf, 'safx532');
 
-        safx534Reinf.COD_EMPRESA = empresa;
-        safx534Reinf.COD_ESTAB = mascaraString(6, estab);
-        safx534Reinf.DATA_MOVTO = safx53Reinf.DATA_MOVTO;
-        safx534Reinf.IND_FIS_JUR = FIS_JUR.IND_FIS_JUR;
-        safx534Reinf.COD_FIS_JUR = mascaraString(14,FIS_JUR.COD_FIS_JUR);
-        safx534Reinf.NUM_DOCFIS = mascaraString(12, docNumber);
-        safx534Reinf.IND_TIPO_REND = safx531Reinf.IND_TIPO_REND;
-        safx534Reinf.IND_TP_PROC_ADJ = safx531Reinf.IND_TP_PROC_ADJ;
-        safx534Reinf.NUM_PROC_ADJ = safx531Reinf.NUM_PROC_ADJ;
-        safx534Reinf.COD_SUSP = safx531Reinf.COD_SUSP;
-        safx534Reinf.COD_DARF = FIS_JUR.COD_DARF.darf;
-        safx534Reinf.VLR_DED_EXIG_SUSP = mascaraNumber(17, ramdomValues(100, 900));
-        exportObject(safx534Reinf, 'safx534');
-
-        safx535Reinf.COD_EMPRESA = empresa;
-        safx535Reinf.COD_ESTAB = mascaraString(6, estab);
-        safx535Reinf.DATA_MOVTO = safx53Reinf.DATA_MOVTO;
-        safx535Reinf.IND_FIS_JUR = FIS_JUR.IND_FIS_JUR;
-        safx535Reinf.COD_FIS_JUR = mascaraString(14,FIS_JUR.COD_FIS_JUR);
-        safx535Reinf.NUM_DOCFIS = mascaraString(12, docNumber);
-        safx535Reinf.IND_TIPO_REND = safx531Reinf.IND_TIPO_REND;
-        safx535Reinf.IND_TP_PROC_ADJ = safx531Reinf.IND_TP_PROC_ADJ;
-        safx535Reinf.NUM_PROC_ADJ = safx531Reinf.NUM_PROC_ADJ;
-        safx535Reinf.COD_SUSP = safx531Reinf.COD_SUSP;
-        exportObject(safx535Reinf, 'safx535');
+        if (FIS_JUR.X275.length > 0){
+            for(let x275 of FIS_JUR.X275){
+                safx534Reinf.COD_EMPRESA = empresa;
+                safx534Reinf.COD_ESTAB = mascaraString(6, estab);
+                safx534Reinf.DATA_MOVTO = safx53Reinf.DATA_MOVTO;
+                safx534Reinf.IND_FIS_JUR = FIS_JUR.IND_FIS_JUR;
+                safx534Reinf.COD_FIS_JUR = mascaraString(14,FIS_JUR.COD_FIS_JUR);
+                safx534Reinf.NUM_DOCFIS = mascaraString(12, docNumber);
+                safx534Reinf.COD_DARF = FIS_JUR.COD_DARF.darf;
+                safx534Reinf.IND_TIPO_REND = safx531Reinf.IND_TIPO_REND;
+                safx534Reinf.IND_TP_PROC_ADJ = safx531Reinf.IND_TP_PROC_ADJ;
+                safx534Reinf.NUM_PROC_ADJ = safx531Reinf.NUM_PROC_ADJ;
+                safx534Reinf.COD_SUSP = safx531Reinf.COD_SUSP;
+                safx534Reinf.NUM_SEQ = x275.NUM_SEQ;
+                safx534Reinf.IND_TP_DEDUCAO = x275.IND_TP_DEDUCAO;
+                safx534Reinf.VLR_DED_EXIG_SUSP = mascaraNumber(17, ramdomValues(100, 900));
+                exportObject(safx534Reinf, 'safx534');
+         
+                safx535Reinf.COD_ESTAB = mascaraString(6, estab);
+                safx535Reinf.COD_EMPRESA = empresa;
+                safx535Reinf.DATA_MOVTO = safx53Reinf.DATA_MOVTO;
+                safx535Reinf.IND_FIS_JUR = FIS_JUR.IND_FIS_JUR;
+                safx535Reinf.COD_FIS_JUR = mascaraString(14,FIS_JUR.COD_FIS_JUR);
+                safx535Reinf.NUM_DOCFIS = mascaraString(12, docNumber);
+                safx535Reinf.COD_DARF = FIS_JUR.COD_DARF.darf;
+                safx535Reinf.IND_TIPO_REND = safx531Reinf.IND_TIPO_REND;
+                safx535Reinf.IND_TP_PROC_ADJ = safx531Reinf.IND_TP_PROC_ADJ;
+                safx535Reinf.NUM_PROC_ADJ = safx531Reinf.NUM_PROC_ADJ;
+                safx535Reinf.COD_SUSP = safx531Reinf.COD_SUSP;
+                safx535Reinf.NUM_SEQ = x275.NUM_SEQ;
+                safx535Reinf.CPF_DEP = x275.CPF_DEP;
+                safx535Reinf.VLR_DEPEN_SUSP = mascaraNumber(17, ramdomValues(100, 900));
+                exportObject(safx535Reinf, 'safx535');
+            }
+        }
 
         safx536Reinf.COD_EMPRESA = empresa;
         safx536Reinf.COD_ESTAB = mascaraString(6, estab);

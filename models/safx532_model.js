@@ -15,7 +15,7 @@ const safx532Reinf = {
     NUM_PROC_ADJ: '@',
     COD_SUSP: '@',
     CPF_CNPJ_ADVOGADO: '@',
-    VLR_DESP_ADVOGADO: '@',
+    VLR_DESP_ADVOGADO: '@'
 }
 
 module.exports = safx532Reinf;

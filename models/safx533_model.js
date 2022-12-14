@@ -12,8 +12,7 @@ const safx533Reinf = {
     ANO_COMPETENCIA: '@',
     MES_COMPETENCIA: '@',
     IND_IMUNE_ISENTO: '@',
-    VLR_RENDIMENTO: '@',
-
+    VLR_RENDIMENTO: '@'
 }
     
 module.exports = safx533Reinf;

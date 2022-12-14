@@ -11,7 +11,7 @@ const safx536Reinf = {
     COD_OPERACAO: 'REINF',
     COD_DARF: '@',
     CPF_DEP: '@',
-    VLR_DEPEN: '@',
+    VLR_DEPEN: '@'
 }
     
 module.exports = safx536Reinf;
