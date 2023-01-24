@@ -53,6 +53,7 @@ const rules = (empresa, estab, mesAno) => {
         safx53Reinf.ALIQUOTA = mascaraNumber(5, FIS_JUR.COD_DARF.aliq * 100);
         safx53Reinf.VLR_IR_RETIDO = mascaraNumber(17, ((Number(safx53Reinf.VLR_BRUTO) / 100) * (Number(safx53Reinf.ALIQUOTA) / 100) / 100).toFixed(2));
         safx53Reinf.COD_NAT_REND = FIS_JUR.COD_NAT_REND;
+        safx53Reinf.COD_SERVICO_NAT_REND = FIS_JUR.COD_SERV_NAT_REND? FIS_JUR.COD_SERV_NAT_REND:'@';
         exportObject(safx53Reinf, 'safx53');
 
         safx531Reinf.COD_EMPRESA = empresa;
@@ -164,4 +165,4 @@ const rules = (empresa, estab, mesAno) => {
 
 }
 
-rules('076', 'ALINE', '122022');
+rules('077', 'LBS01', '122022');
