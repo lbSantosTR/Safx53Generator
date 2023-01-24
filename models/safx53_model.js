@@ -101,7 +101,8 @@ const safx53Reinf = {
     VLR_APOSENT_ISENTA_13: '@',
     VLR_JUROS_MORA: '@',
     VLR_RESG_PREV_COMPL: '@',
-    VLR_REND_S_RET_IR: '@'
+    VLR_REND_S_RET_IR: '@',
+    COD_SERVICO_NAT_REND: '@'
 }
 
 module.exports = safx53Reinf;
